@@ -11,8 +11,15 @@ public class ForgotPasswordElements extends MyMethods {
         PageFactory.initElements(DriverClass.getDriver(), this);
     }
 
-    @FindBy(linkText = "Forgotten Password")
+    @FindBy(xpath = "//a[text()='Forgotten Password']")
     private WebElement forgottenPasswordLink;
+
+    @FindBy(css = "#content>h2:nth-child(1)")
+    private WebElement myAccountHeader;
+
+    public WebElement getMyAccountHeader() {
+        return myAccountHeader;
+    }
 
     @FindBy(css = "ul.breadcrumb")
     private WebElement breadcrumb;
@@ -29,9 +36,12 @@ public class ForgotPasswordElements extends MyMethods {
     @FindBy(css = "div[id='content']>h1,h2,h3")
     private WebElement breadcrumbHeader;
 
+
     public WebElement getForgottenPasswordLink() {
         return forgottenPasswordLink;
     }
+
+
 
     public WebElement getBreadcrumb() {
         return breadcrumb;
@@ -52,4 +62,5 @@ public class ForgotPasswordElements extends MyMethods {
     public WebElement getBreadcrumbHeader() {
         return breadcrumbHeader;
     }
+
 }
