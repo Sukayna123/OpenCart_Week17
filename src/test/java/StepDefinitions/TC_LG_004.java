@@ -7,14 +7,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
-public class Logout {
+public class TC_LG_004 {
     LogoutElements le = new LogoutElements();
 
     @When("Logout")
     public void logout() {
         le.clickMethod(le.getMyAccount());
         le.clickMethod(le.getLogout());
-
     }
 
     @And("Click Browser back button")
@@ -28,4 +27,6 @@ public class Logout {
         le.clickMethod(le.getMyAccountButton());
         Assert.assertTrue(DriverClass.getDriver().getCurrentUrl().contains("login"));
     }
+
+
 }
