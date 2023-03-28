@@ -51,6 +51,10 @@ public class MyMethods {
         waitUntilClickable(element);
         return element.isSelected();
     }
+    public boolean verifyIsDisplayedMethod(WebElement element) {
+        waitUntilClickable(element);
+        return element.isDisplayed();
+    }
 
     public void setWait(int second) {
         try {
@@ -58,5 +62,9 @@ public class MyMethods {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+    public boolean isSelectedMethod(WebElement element) {
+        waitUntilClickable(element);
+        return element.isSelected();
     }
 }
