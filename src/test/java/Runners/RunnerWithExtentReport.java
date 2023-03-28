@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 //        tags = "@Regression",
-        features = {"src/test/java/FeatureFiles/Register.feature"},
+        features = {"src/test/java/FeatureFiles/Logout.feature"},
         glue = {"StepDefinitions"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
