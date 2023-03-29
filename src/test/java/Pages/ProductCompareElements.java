@@ -25,6 +25,15 @@ public class ProductCompareElements extends MyMethods {
     @FindBy(xpath = "//strong[text()='Product Details']")
     private WebElement ProductDetailsHeaderInComparisonPage;
 
+    @FindBy(css = "#menu > div.collapse.navbar-collapse.navbar-ex1-collapse > ul > li:nth-child(1) > div > a")
+    private WebElement showAllDesktopsButton;
+
+    @FindBy(id = "grid-view")
+    private WebElement gridViewButton;
+
+    @FindBy(linkText = "Desktops")
+    private WebElement desktopsButton;
+
     public WebElement getCompareProductButtonSingleProduct() {
         return compareProductButtonSingleProduct;
     }
@@ -43,5 +52,17 @@ public class ProductCompareElements extends MyMethods {
 
     public WebElement getProductDetailsHeaderInComparisonPage() {
         return ProductDetailsHeaderInComparisonPage;
+    }
+
+    public WebElement getShowAllDesktopsButton() {
+        return showAllDesktopsButton;
+    }
+
+    public WebElement getGridViewButton() {
+        return gridViewButton;
+    }
+
+    public WebElement getDesktopsButton() {
+        return desktopsButton;
     }
 }
