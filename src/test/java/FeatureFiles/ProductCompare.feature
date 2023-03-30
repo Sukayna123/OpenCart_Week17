@@ -15,7 +15,7 @@ Feature: Product Compare Functionality
 
     Scenario: TC_PC_005 Validate adding the product for comparison from Grid View of Product Category or Sub Category page
       Given Navigate to web site
-      When Hover the mouse on Desktops and select Show All Desktops option
+      When Hover the mouse on Desktops and select Show All Desktops option --- --- aa bbss  dsdas
       And Select Grid view
       And Hover the mouse cursor on Compare this Product option from the displayed Product Display Page
       Then Tool tip with the text Compare this Product should be displayed
