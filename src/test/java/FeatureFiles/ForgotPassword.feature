@@ -28,4 +28,4 @@ Feature: Forgot Password Functionality
   Scenario: TC_FP_025 - Validate the Password Reset functionality in all the supported environments
     Given I am on the Login page
     When I click on the "Forgotten Password" link
-    Then I should be redirected to the "Forgot Your Password?" page
+    Then I should be redirected to the "Forgot Your Password?" page...
