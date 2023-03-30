@@ -70,6 +70,7 @@ Feature: Checkout Functionality
       And Click on Continue button in Delivery Details
       Then Warning messages should be displayed for all mandatory fields in Delivery Details section
 
+
       Examples:
         | Product |
         | iMac    |
