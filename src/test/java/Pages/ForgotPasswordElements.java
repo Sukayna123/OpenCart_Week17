@@ -37,11 +37,19 @@ public class ForgotPasswordElements extends MyMethods {
     private WebElement breadcrumbHeader;
 
 
+    @FindBy(xpath = "//a[@class='dropdown-toggle']")
+    public WebElement myAccount;
+
+    @FindBy(xpath = "//a[text()='Login']")
+    public WebElement loginButtonHomePage;
+    @FindBy(xpath ="//div[@class='list-group']//a[3]"  )
+    public WebElement forgotPasswordRightColumn1;
+
+
+
     public WebElement getForgottenPasswordLink() {
         return forgottenPasswordLink;
     }
-
-
 
     public WebElement getBreadcrumb() {
         return breadcrumb;
@@ -63,4 +71,16 @@ public class ForgotPasswordElements extends MyMethods {
         return breadcrumbHeader;
     }
 
+
+    public WebElement getMyAccount() {
+        return myAccount;
+    }
+
+    public WebElement getLoginButtonHomePage() {
+        return loginButtonHomePage;
+    }
+
+    public WebElement getForgotPasswordRightColumn1() {
+        return forgotPasswordRightColumn1;
+    }
 }
