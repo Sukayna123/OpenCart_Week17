@@ -8,3 +8,9 @@ Feature: Wish List Functionality
     And I click on the product name in the search results
     And I click on the "Add to Wish List" button
     Then I should see success message
+
+  Scenario: TC_WL_008 Validate navigating to 'My Wish List' page using the 'Right Column' header options
+    Given Navigate to Application
+    And Login
+    And  Click on Wish List option from the Right Column options
+    Then User should be taken to My Wish List page
