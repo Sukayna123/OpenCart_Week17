@@ -1,11 +1,13 @@
 package StepDefinitions;
 
+import Pages.LogoutElements;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TC_LG_009 {
+    LogoutElements le = new LogoutElements();
 
     @Given("I am logged in to my account")
     public void ıAmLoggedInToMyAccount() {

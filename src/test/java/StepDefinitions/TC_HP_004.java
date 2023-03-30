@@ -1,11 +1,14 @@
 package StepDefinitions;
 
+import Pages.ShoppingCartElements;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TC_HP_004 {
+
+
     @Given("I am on the home page of the website")
     public void ıAmOnTheHomePageOfTheWebsite() {
         

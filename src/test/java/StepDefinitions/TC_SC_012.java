@@ -1,10 +1,12 @@
 package StepDefinitions;
 
+import Pages.SearchElements;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
 public class TC_SC_012 {
 
+    SearchElements se = new SearchElements();
 
     @And("I click on the Add to Cart button")
     public void ıClickOnTheAddToCartButton() {

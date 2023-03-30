@@ -1,10 +1,14 @@
 package StepDefinitions;
 
+import Pages.CheckoutElements;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TC_CO_014 {
+
+    CheckoutElements ce = new CheckoutElements();
+
     @When("I enter Product Name into the search text box field")
     public void ıEnterProductNameIntoTheSearchTextBoxField() {
     }
