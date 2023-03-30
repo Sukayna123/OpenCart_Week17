@@ -1,0 +1,99 @@
+Index: src/test/java/FeatureFiles/Checkout.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Checkout Functionality\r\n  Scenario Outline: TC_CO_017 Validate Checkout as New User\r\n    Given Navigate to Application\r\n    When Enter any existing Product name into the Search text box field \"<Product>\"\r\n    And Click on the button having search icon\r\n    And Click on Add to Cart button on the Product displayed in the Search results\r\n    And Click on the Shopping cart! link in the displayed success message\r\n    When Click on Checkout button in the Shopping Cart page\r\n    Then Checkout Page should be displayed\r\n    And Select Register Account option in the New Customer section of the displayed Checkout page\r\n    When Click on Continue button in CheckoutOptions\r\n    Then User should be taken to Billing Details section\r\n    And My delivery and billing addresses are the same checkbox should be displayed as selected by default\r\n    And Enter details into all the fields\r\n    When Click on Continue button in BillingDetails\r\n    And Click on Continue button in Delivery Details\r\n    Then User should be taken to Delivery Method section\r\n    And Flat Shipping Rate 5dollar radio button should be displayed as selected by default\r\n    When Click on Continue button in Delivery Method\r\n    Then User should be taken to Payment Method section\r\n    And Bank Transfer radio button should be displayed as selected by default\r\n    When Select Terms and Conditions checkbox\r\n    And Click on Continue button in Payment Method\r\n    Then User should be taken to Confirm Order section\r\n    And Correct and Proper details should be displayed in the Confirm Order section\r\n    When Click on Confirm Order button in Confirm Order\r\n    Then Order should be placed and User should be taken to Success page (Proper details should be displayed in the Order Success page)\r\n    Examples:\r\n      | Product |\r\n      | iMac    |\r\n\r\n  Scenario Outline: TC_CO_018 As a user I should be able to check out, when I add an item to Cart with out sign in and sign from check out section.\r\n    Given Navigate to Application\r\n    When Enter any existing Product name into the Search text box field \"<Product>\"\r\n    And Click on the button having search icon\r\n    And Click on Add to Cart button on the Product displayed in the Search results\r\n    And Click on the Shopping cart! link in the displayed success message\r\n    And Click on Checkout button in the Shopping Cart page\r\n    Then Checkout Page should be displayed\r\n    And Enter credentials of existing account in the Returning Customer section of the displayed Checkout page\r\n    And Click on Login button\r\n    Then User should be logged in and taken to Billing Details section\r\n    And  I want to use an existing address checkbox should be displayed as selected by default\r\n    When Click on Continue button in BillingDetails after Login\r\n    And I want to use an existing address radio button should be displayed as selected by default\r\n    When Click on Continue button in Delivery Details\r\n    Then User should be taken to Delivery Method section\r\n    And Flat Shipping Rate 5dollar radio button should be displayed as selected by default\r\n    When Click on Continue button in Delivery Method\r\n    Then  User should be taken to Payment Method section\r\n    And Select Terms and Conditions checkbox\r\n    When Click on Continue button in Payment Method\r\n    Then User should be taken to Confirm Order section\r\n    When Click on Confirm Order button in Confirm Order\r\n    Then Order should be placed and User should be taken to Success page (Proper details should be displayed in the Order Success page)\r\n    Examples:\r\n      | Product |\r\n      | iMac    |
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/FeatureFiles/Checkout.feature b/src/test/java/FeatureFiles/Checkout.feature
+--- a/src/test/java/FeatureFiles/Checkout.feature	(revision 806049d1d2f46396a44d880a64211b62a4458f91)
++++ b/src/test/java/FeatureFiles/Checkout.feature	(date 1680126280120)
+@@ -55,4 +55,12 @@
+     Then Order should be placed and User should be taken to Success page (Proper details should be displayed in the Order Success page)
+     Examples:
+       | Product |
+-      | iMac    |
+\ No newline at end of file
++      | iMac    |
++
++    Scenario: TC_CO_002 Comment entered should be displayed as it is in the 'Payment Method' section and order should be placed and User should be taken to Success page (Proper details should be displayed in the Order Success page).
++      Given I am on the home page of the website
++      When
++
++
++    Scenario: TC_CO_014
++
+Index: src/test/java/FeatureFiles/Logout.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Log Out Functionality\r\n\r\n  Scenario: TC_LG_004 - Validate logging out and browsing back\r\n    Given Login\r\n    When Logout\r\n    And Click Browser back button\r\n    Then User should be logged out
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/FeatureFiles/Logout.feature b/src/test/java/FeatureFiles/Logout.feature
+--- a/src/test/java/FeatureFiles/Logout.feature	(revision 806049d1d2f46396a44d880a64211b62a4458f91)
++++ b/src/test/java/FeatureFiles/Logout.feature	(date 1680126387378)
+@@ -4,4 +4,7 @@
+     Given Login
+     When Logout
+     And Click Browser back button
+-    Then User should be logged out
+\ No newline at end of file
++    Then User should be logged out
++
++  Scenario: TC_LG_009
++    Given
+\ No newline at end of file
+Index: src/test/java/FeatureFiles/ForgotPassword.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Forgot Password Functionality\r\n\r\n  Scenario: TC_FP_004 Validate logging into the Application with the old password when you have initiated the resetting password process and have not reset the password\r\n    Given Navigate to the Login page\r\n    When I click on Forgotten Password link from Login page\r\n    And Enter registered email address into the E-mail Address field\r\n    And Click on Continue button\r\n    And Enter with old credentials\r\n    And Click on Login button after forgot password\r\n    Then User should be logged in\r\n\r\n\r\n  Scenario: TC_FP_021 Validate Breadcrumb of the 'Forgotten Password' page\r\n    Given Navigate to web site\r\n    When Click on My Account dropdown menu and click on login\r\n    And Click on forgotten password link\r\n    Then Breadcrumb are displayed\r\n    Then Check the Breadcrumb links working\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/FeatureFiles/ForgotPassword.feature b/src/test/java/FeatureFiles/ForgotPassword.feature
+--- a/src/test/java/FeatureFiles/ForgotPassword.feature	(revision 806049d1d2f46396a44d880a64211b62a4458f91)
++++ b/src/test/java/FeatureFiles/ForgotPassword.feature	(date 1680126333298)
+@@ -17,3 +17,5 @@
+     Then Breadcrumb are displayed
+     Then Check the Breadcrumb links working
+ 
++
++   Scenario: TC_FP_025
+\ No newline at end of file
+Index: src/test/java/FeatureFiles/ProductCompare.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Product Compare Functionality\r\n  Scenario Outline: TC_PC_001 Validate adding the product for comparison from Product Display Page\r\n    Given Navigate to Application\r\n    When Enter any existing Product name into the Search text box field \"<Product>\"\r\n    And Click on the button having search icon\r\n    When Hover the mouse cursor on Compare this Product option from the displayed Product Display Page\r\n    Then Tool tip with the text Compare this Product should be displayed\r\n    When Click Compare this Product option\r\n    Then Success message with text Success: You have added Product Name to your product comparison! should be displayed\r\n    And Click on product comparison link from the displayed success message\r\n    Then User should be taken to the Product Comparison page with the details of the Product that we have added for comparison.\r\n    Examples:\r\n      | Product |\r\n      | iMac    |\r\n\r\n    Scenario: TC_PC_005 Validate adding the product for comparison from Grid View of Product Category or Sub Category page\r\n      Given Navigate to web site\r\n      When Hover the mouse on Desktops and select Show All Desktops option\r\n      And Select Grid view\r\n      And Hover the mouse cursor on Compare this Product option from the displayed Product Display Page\r\n      Then Tool tip with the text Compare this Product should be displayed\r\n      And Click Compare this Product option\r\n      Then Success message with text Success: You have added Product Name to your product comparison! should be displayed\r\n      And Click on product comparison link from the displayed success message\r\n      Then User should be taken to the Product Comparison page with the details of the Product that we have added for comparison.\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/FeatureFiles/ProductCompare.feature b/src/test/java/FeatureFiles/ProductCompare.feature
+--- a/src/test/java/FeatureFiles/ProductCompare.feature	(revision 806049d1d2f46396a44d880a64211b62a4458f91)
++++ b/src/test/java/FeatureFiles/ProductCompare.feature	(date 1680126581273)
+@@ -24,3 +24,6 @@
+       And Click on product comparison link from the displayed success message
+       Then User should be taken to the Product Comparison page with the details of the Product that we have added for comparison.
+ 
++
++    Scenario: TC_PC_009
++      
+\ No newline at end of file
+Index: src/test/java/FeatureFiles/Search.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Search Functionality\r\n  Scenario Outline: TC_SF_005 Validate searching by providing a search criteria which results in multiple products\r\n    Given Navigate to Application\r\n    When Enter any existing Product name into the Search text box field \"<Product>\"\r\n    And Click on the button having search icon\r\n    Then More than one products should be displayed in the search results page\r\n    Examples:\r\n      | Product |\r\n      | Mac     |\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/FeatureFiles/Search.feature b/src/test/java/FeatureFiles/Search.feature
+--- a/src/test/java/FeatureFiles/Search.feature	(revision 806049d1d2f46396a44d880a64211b62a4458f91)
++++ b/src/test/java/FeatureFiles/Search.feature	(date 1680126461495)
+@@ -7,3 +7,7 @@
+     Examples:
+       | Product |
+       | Mac     |
++
++
++
++
