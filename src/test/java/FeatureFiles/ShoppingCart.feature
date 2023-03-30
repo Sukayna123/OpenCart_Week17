@@ -25,3 +25,19 @@ Feature: Shopping Cart Functionality
       | Product |
       | iMac    |
 
+  Scenario Outline: TC_SC_018 Validate Closing the Warning message in the 'Shopping Cart' page
+    Given Navigate to Application
+    When Enter any existing Product name into the Search text box field "<Product>"
+    And Click on the button having search icon
+    And Click on the Product displayed in the Search results
+    And Click on Add to Cart button in the displayed Product Display page
+    And Click on the Shopping cart! link in the displayed success message
+    And Click on Use Coupon Code section
+    When Don't enter any Coupon code into the Enter your coupon here text field
+    And Click on Apply Coupon button
+    And Click on x option on the displayed warning message
+    Then Warning message should disappear.
+    Examples:
+      | Product |
+      | iMac    |
+
