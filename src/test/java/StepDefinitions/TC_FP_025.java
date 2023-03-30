@@ -10,13 +10,15 @@ public class TC_FP_025 {
         
     }
 
-    @When("I click on the {string} link")
-    public void ıClickOnTheLink(String arg0) {
-        
+
+    @When("I click on the Forgotten Password link")
+    public void ıClickOnTheForgottenPasswordLink() {
     }
 
-    @Then("I should be redirected to the {string} page...")
-    public void ıShouldBeRedirectedToThePage(String arg0) {
+
+    @Then("I should be redirected to the Forgot Your Password page")
+    public void ıShouldBeRedirectedToTheForgotYourPasswordPage() {
 
     }
 }
+

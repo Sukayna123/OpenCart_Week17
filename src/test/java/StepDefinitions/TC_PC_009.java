@@ -11,23 +11,24 @@ public class TC_PC_009 {
         
     }
 
-    @When("I hover the mouse over the {string} menu")
-    public void ıHoverTheMouseOverTheMenu(String arg0) {
-        
+
+    @When("I hover the mouse over the Desktops menu")
+    public void ıHoverTheMouseOverTheDesktopsMenu() {
+
     }
 
-    @And("I select the {string} option.")
-    public void ıSelectTheOption(String arg0) {
-        
+    @And("I select the Show All Desktops option")
+    public void ıSelectTheShowAllDesktopsOption() {
+
     }
 
     @And("I should see a list of desktop products")
     public void ıShouldSeeAListOfDesktopProducts() {
-        
+
     }
 
-    @Then("I click on the {string} link for two products")
-    public void ıClickOnTheLinkForTwoProducts(String arg0) {
+    @Then("I click on the Product Compare link for two products")
+    public void ıClickOnTheProductCompareLinkForTwoProducts() {
 
     }
 }

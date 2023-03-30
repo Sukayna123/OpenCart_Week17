@@ -17,17 +17,16 @@ public class TC_PDP_018 {
     public void ıClickOnTheProductNameInTheSearchResults() {
     }
 
-    @And("I click on the {string} tab")
-    public void ıClickOnTheTab(String arg0) {
+    @And("I click on the Reviews tab")
+    public void ıClickOnTheReviewsTab() {
     }
 
     @And("I provide my name and a rating for the product")
     public void ıProvideMyNameAndARatingForTheProduct() {
     }
 
-    @Then("I should see a warning message that the review text must be between {int} and {int} characters")
-    public void ıShouldSeeAWarningMessageThatTheReviewTextMustBeBetweenAndCharacters(int arg0, int arg1) {
+
+    @Then("I should see a warning message that the review text must be between twenty five and one hundred characters")
+    public void ıShouldSeeAWarningMessageThatTheReviewTextMustBeBetweenTwentyFiveAndOneHundredCharacters() {
     }
-
-
 }
