@@ -74,3 +74,4 @@ Feature: Checkout Functionality
       Examples:
         | Product |
         | iMac    |
+
