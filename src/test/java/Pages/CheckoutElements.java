@@ -117,6 +117,9 @@ public class CheckoutElements extends MyMethods {
     @FindBy(id = "button-payment-address")
     private WebElement continueBillingDetails;
 
+    @FindBy(css = "div#content>p")
+    private WebElement shoppingCartEmptyMessage;
+
     public WebElement getContinueButtonBillingDetailsLogin() {
         return continueButtonBillingDetailsLogin;
     }
@@ -255,5 +258,9 @@ public class CheckoutElements extends MyMethods {
 
     public WebElement getContinueBillingDetails() {
         return continueBillingDetails;
+    }
+
+    public WebElement getShoppingCartEmptyMessage() {
+        return shoppingCartEmptyMessage;
     }
 }

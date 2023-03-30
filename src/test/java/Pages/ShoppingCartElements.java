@@ -14,7 +14,14 @@ public class ShoppingCartElements extends MyMethods {
     @FindBy(css = "a.btn.btn-default")
     private WebElement continueShoppingButton;
 
+    @FindBy(css = "div > span > button.btn.btn-danger")
+    private WebElement removeButton;
+
     public WebElement getContinueShoppingButton() {
         return continueShoppingButton;
+    }
+
+    public WebElement getRemoveButton() {
+        return removeButton;
     }
 }
