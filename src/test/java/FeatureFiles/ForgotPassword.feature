@@ -20,5 +20,5 @@ Feature: Forgot Password Functionality
   Scenario: TC_FP_020 Validate navigating to 'Forgotten Password' page from 'Right Column' options
     Given Navigate to web site
     When click my account
-   And click login
-   And Click on Forgotten Password option from the Right Column
+    And click login
+    And Click on Forgotten Password option from the Right Column
