@@ -17,3 +17,15 @@ Feature: Forgot Password Functionality
     Then Breadcrumb are displayed
     Then Check the Breadcrumb links working
 
+  Scenario: TC_FP_020 Validate navigating to 'Forgotten Password' page from 'Right Column' options
+    Given Navigate to web site
+    When click my account
+   And click login
+   And Click on Forgotten Password option from the Right Column
+
+
+
+  Scenario: TC_FP_025 - Validate the Password Reset functionality in all the supported environments
+    Given I am on the Login page
+    When I click on the "Forgotten Password" link
+    Then I should be redirected to the "Forgot Your Password?" page

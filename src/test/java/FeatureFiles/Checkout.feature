@@ -56,3 +56,37 @@ Feature: Checkout Functionality
     Examples:
       | Product |
       | iMac    |
+
+    Scenario Outline: TC_CO_013 Validate without entering any fields in the Delivery Details Section of the Checkout Page
+      Given Navigate to web site
+      When Login
+      And Enter any existing Product name into the Search text box field "<Product>"
+      And Click on the button having search icon
+      And Click on Add to Cart button on the Product displayed in the Search results
+      And Click on the Shopping cart! link in the displayed success message
+      And Click on Checkout button in the Shopping Cart page
+      And Click on Continue button in Billing Details
+      And Select I want to use a new address radio option
+      And Click on Continue button in Delivery Details
+      Then Warning messages should be displayed for all mandatory fields in Delivery Details section
+
+      Examples:
+        | Product |
+        | iMac    |
+
+
+  Scenario: TC_CO_014 Validate adding comments about your order in the 'Delivery Method' section of Checkout page
+    Given I am on the home page of the website
+    When I enter "<Product Name>" into the search text box field
+    And I click on the search icon
+    And I click on the 'Add to Cart' button on the Product displayed in the Search results
+    And I click on the 'shopping cart!' link in the displayed success message
+    And I click on the 'Checkout' button in the 'Shopping Cart' page
+    And I click on the 'Continue' button
+    And I click on the 'Continue' button
+    And I enter "<Order Comments>" into the 'Add Comments About Your Order' text field
+    And I click on the 'Continue' button
+    And I select the 'Terms & Conditions' checkbox field
+    And I click on the 'Continue' button
+    And I click on the 'Confirm Order' button
+    Then I should see a success message
