@@ -15,7 +15,14 @@ public class SearchElements extends MyMethods {
     @FindBy(css = "div[class='product-thumb']")
     private List<WebElement> listOfElementAfterSearch;
 
+    @FindBy(css = "select[class='form-control']")
+    private List<WebElement> showDropDownButton;
+
     public List<WebElement> getListOfElementAfterSearch() {
         return listOfElementAfterSearch;
+    }
+
+    public List<WebElement> getShowDropDownButton() {
+        return showDropDownButton;
     }
 }
