@@ -1,6 +1,16 @@
 Feature: Shopping Cart Functionality
 
-<<<<<<<<< Temporary merge branch 1
+
+  Scenario: TC_SC_012 - Validate Breadcrumb of 'Shopping Cart' page
+    Given I am on the home page
+    When I enter an existing product name into the search text box
+    And I click on the search button
+    And I click on the product name in the search results
+    And I click on the "Add to Cart" button
+    And I click on the "shopping cart!" link in the success message
+    And the breadcrumb should display "Home > Shopping Cart"
+    Then I click the breadcrumb
+
   Scenario Outline: TC_SC_010 Validate removing the item from Shopping Cart page
     Given Navigate to web site
     When Enter any existing Product name into the Search text box field "<Product>"
@@ -14,14 +24,4 @@ Feature: Shopping Cart Functionality
     Examples:
       | Product |
       | iMac    |
-=========
-  Scenario: TC_SC_012 - Validate Breadcrumb of 'Shopping Cart' page
-    Given I am on the home page
-    When I enter an existing product name into the search text box
-    And I click on the search button
-    And I click on the product name in the search results
-    And I click on the "Add to Cart" button
-    And I click on the "shopping cart!" link in the success message
-    And the breadcrumb should display "Home > Shopping Cart"
-    Then I click the breadcrumb
->>>>>>>>> Temporary merge branch 2
+
