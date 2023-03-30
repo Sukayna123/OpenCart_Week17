@@ -67,4 +67,6 @@ public class MyMethods {
         waitUntilClickable(element);
         return element.isSelected();
     }
-}
+
+
+    }
