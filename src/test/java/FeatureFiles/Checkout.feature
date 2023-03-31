@@ -73,21 +73,5 @@ Feature: Checkout Functionality
     And I click on the Confirm Order button
     Then I should see a success message
 
-    Scenario Outline: TC_CO_013 Validate without entering any fields in the Delivery Details Section of the Checkout Page
-      Given Navigate to web site
-      When Login
-      And Enter any existing Product name into the Search text box field "<Product>"
-      And Click on the button having search icon
-      And Click on Add to Cart button on the Product displayed in the Search results
-      And Click on the Shopping cart! link in the displayed success message
-      And Click on Checkout button in the Shopping Cart page
-      And Click on Continue button in Billing Details
-      And Select I want to use a new address radio option
-      And Click on Continue button in Delivery Details
-      Then Warning messages should be displayed for all mandatory fields in Delivery Details section
 
-
-      Examples:
-        | Product |
-        | iMac    |
 

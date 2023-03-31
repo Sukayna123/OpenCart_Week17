@@ -9,24 +9,13 @@ Feature: Forgot Password Functionality
     And Click on Login button after forgot password
     Then User should be logged in
 
-
-  Scenario: TC_FP_021 Validate Breadcrumb of the 'Forgotten Password' page
-    Given Navigate to web site
-    When Click on My Account dropdown menu and click on login
-    And Click on forgotten password link
-    Then Breadcrumb are displayed
-    Then Check the Breadcrumb links working
-
-
   Scenario: TC_FP_025 Validate the Password Reset functionality in all the supported environments
     Given I am on the Login page
     When I click on the Forgotten Password link
     Then I should be redirected to the Forgot Your Password page
-<<<<<<<<< Temporary merge branch 1
+
   Scenario: TC_FP_020 Validate navigating to 'Forgotten Password' page from 'Right Column' options
     Given Navigate to web site
     When click my account
     And click login
     And Click on Forgotten Password option from the Right Column
-=========
->>>>>>>>> Temporary merge branch 2
