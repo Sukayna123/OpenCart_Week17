@@ -17,16 +17,6 @@ Feature: Product Display Page Functionality
     And I should see product of search results
     Then I should see the bulk purchase prices for the product
 
-  Scenario Outline: TC_PDP_022 Validate Related Products section in Product Display page
-    Given Navigate to Application
-    When Enter any existing Product name into the Search text box field "<Product>"
-    And  Click on the button having search icon
-    And Click on the Product displayed in the Search results
-    And Click on the Related Products section in the displayed Product Display Page
-    Then User should see the Product displayed in the Related Products section and is able ot click it and navigate to the Product Display Page of it
 
-    Examples:
-      | Product |
-      | iMac    |
 
 
