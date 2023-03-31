@@ -15,8 +15,8 @@ public class ProductDisplayPageElements extends MyMethods {
     @FindBy(name = "search")
     public WebElement inputBox;
 
-//    @FindBy(xpath = "//button[@class='btn btn-default btn-lg'")
-//    public WebElement searchIcon;
+    @FindBy(xpath = "//button[@class='btn btn-default btn-lg'")
+    public WebElement searchIcon;
 
 
     @FindBy(css = "button[class='btn btn-default btn-lg']")
@@ -34,13 +34,16 @@ public class ProductDisplayPageElements extends MyMethods {
     @FindBy(xpath = "//li[text()='Product Code: Product 14']")
     public WebElement productCode;
 
+    @FindBy(css = "div>h3")
+    private WebElement relatedProductsHeader;
+
     public WebElement getInputBox() {
         return inputBox;
     }
 
-//    public WebElement getSearchIcon() {
-//        return searchIcon;
-//    }
+    public WebElement getSearchIcon() {
+        return searchIcon;
+    }
 
     public WebElement getSingleProductDisplayed() {
         return singleProductDisplayed;
@@ -60,5 +63,9 @@ public class ProductDisplayPageElements extends MyMethods {
 
     public WebElement getSearchIconButton() {
         return searchIconButton;
+    }
+
+    public WebElement getRelatedProductsHeader() {
+        return relatedProductsHeader;
     }
 }
