@@ -2,6 +2,7 @@ package Pages;
 
 import Utilities.DriverClass;
 import Utilities.MyMethods;
+import freemarker.ext.jsp.TaglibFactory;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,31 +12,53 @@ public class ProductDisplayPageElements extends MyMethods {
         PageFactory.initElements(DriverClass.getDriver(), this);
     }
 
-    @FindBy(css = "img[class='img-responsive']")
-    private WebElement singleProductAfterSearch;
+    @FindBy(name = "search")
+    public WebElement inputBox;
 
-    @FindBy(css = "div>h3")
-    private WebElement relatedProductsHeader;
+//    @FindBy(xpath = "//button[@class='btn btn-default btn-lg'")
+//    public WebElement searchIcon;
 
-    @FindBy(xpath = "//a[text()='Description']")
-    private WebElement descriptionTab;
 
-    @FindBy(css = ".tab-content")
-    private WebElement descriptionText;
+    @FindBy(css = "button[class='btn btn-default btn-lg']")
+    private WebElement searchIconButton;
 
-    public WebElement getDescriptionText() {
-        return descriptionText;
+    @FindBy(xpath = "//img[@class='img-responsive']")
+    public WebElement singleProductDisplayed;
+
+    @FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[2]/h1")
+    public WebElement productName;
+
+    @FindBy(xpath = "//li[text()='Brands ']")
+    public WebElement brandName;
+
+    @FindBy(xpath = "//li[text()='Product Code: Product 14']")
+    public WebElement productCode;
+
+    public WebElement getInputBox() {
+        return inputBox;
     }
 
-    public WebElement getDescriptionTab() {
-        return descriptionTab;
+//    public WebElement getSearchIcon() {
+//        return searchIcon;
+//    }
+
+    public WebElement getSingleProductDisplayed() {
+        return singleProductDisplayed;
     }
 
-    public WebElement getSingleProductAfterSearch() {
-        return singleProductAfterSearch;
+    public WebElement getProductName() {
+        return productName;
     }
 
-    public WebElement getRelatedProductsHeader() {
-        return relatedProductsHeader;
+    public WebElement getBrandName() {
+        return brandName;
+    }
+
+    public WebElement getProductCode() {
+        return productCode;
+    }
+
+    public WebElement getSearchIconButton() {
+        return searchIconButton;
     }
 }

@@ -1,6 +1,7 @@
 Feature: Product Display Page Functionality
 
 
+
   Scenario: TC_PDP_018 Validate the review text given while writing is accepted according to the specified number of characters
     Given I am on the home page
     When I enter an existing product name into the search text box
@@ -16,6 +17,7 @@ Feature: Product Display Page Functionality
     And I click on the search button
     And I should see product of search results
     Then I should see the bulk purchase prices for the product
+
 
 
 
