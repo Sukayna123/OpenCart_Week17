@@ -13,9 +13,9 @@ public class TC_PC_004 {
     @When("Hover the mouse on any Menu say Desktops and select Show All Desktops option")
     public void hoverTheMouseOnAnyMenuSayDesktopsAndSelectShowAllDesktopsOption() {
 
-       // Actions actions=new Actions(DriverClass.getDriver());
-       // Action hoverOverElement=actions.moveToElement(pc.getDesktopsButton()).build();
-       // pc.hoverOver(pc.getDesktopButtonHomePAge());
+       Actions actions=new Actions(DriverClass.getDriver());
+        Action hoverOverElement=actions.moveToElement(pc.getDesktopsButton()).build();
+       hoverOverElement.perform();
         pc.clickMethod(pc.getDesktopsButton());
         pc.clickMethod(pc.getShowAllDesktopsButton());
     }
@@ -27,16 +27,19 @@ public class TC_PC_004 {
 
     @And("Hover the mouse cursor on Compare this Product option available on the Product that is displayed in the Product Category page")
     public void hoverTheMouseCursorOnCompareThisProductOptionAvailableOnTheProductThatIsDisplayedInTheProductCategoryPage() {
-        pc.hoverOver(pc.getCompareThisProductButton());
+        pc.hoverOver(pc.getCompareProductButtonSingleProduct());
     }
 
     @And("Select Compare this Product option")
     public void selectCompareThisProductOption() {
-        pc.clickMethod(pc.getCompareThisProductButton());
+        pc.clickMethod(pc.getCompareProductButtonSingleProduct());
     }
 
     @Then("click on product comparison link from the displayed success message")
     public void clickOnProductComparisonLinkFromTheDisplayedSuccessMessage() {
+
+        pc.verifyIsDisplayedMethod(pc.getAddingComparisonSuccessMessage());
         pc.clickMethod(pc.getProductComparisonLinkFromMessage());
+
     }
 }

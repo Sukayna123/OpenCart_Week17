@@ -34,6 +34,10 @@ public class ProductCompareElements extends MyMethods {
     @FindBy(linkText = "Desktops")
     private WebElement desktopsButton;
 
+
+    @FindBy(id = "list-view")
+    public WebElement ListViewButton;
+
     public WebElement getCompareProductButtonSingleProduct() {
         return compareProductButtonSingleProduct;
     }
@@ -64,5 +68,9 @@ public class ProductCompareElements extends MyMethods {
 
     public WebElement getDesktopsButton() {
         return desktopsButton;
+    }
+
+    public WebElement getListViewButton() {
+        return ListViewButton;
     }
 }
