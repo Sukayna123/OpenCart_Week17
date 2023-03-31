@@ -68,3 +68,14 @@ Feature: Open Cart functionalities
     Examples:
       | Product |
       | iMac    |
+
+    Scenario: TC_WL_004 Validate adding the product to Wish List from the Products displayed in the category or sub-category page
+      Given Login
+      When Hover the mouse on Desktops and select Show All Desktops option
+      And Select Mac subcategory option from the left side options
+      And Click on Add to Wish List option
+      Then Success message with text - Success: You have added Product Name to your wish list! should be displayed
+      And Click on Wish List link in the success message
+      Then Product should be successfully displayed in the My Wish List page
+
+

@@ -37,6 +37,18 @@ public class ProductDisplayPageElements extends MyMethods {
     @FindBy(css = "div>h3")
     private WebElement relatedProductsHeader;
 
+    @FindBy(css = " div.list-group > a:nth-child(3)")
+    private WebElement macButton;
+
+    @FindBy(css = " div.button-group > button:nth-child(2)")
+    private WebElement addToWishListButton;
+
+    @FindBy(css = " div.alert.alert-success.alert-dismissible")
+    private WebElement wishListSuccessMessage;
+
+    @FindBy(xpath = "//a[text()='wish list']")
+    private WebElement wishListLink;
+
     public WebElement getInputBox() {
         return inputBox;
     }
@@ -67,5 +79,21 @@ public class ProductDisplayPageElements extends MyMethods {
 
     public WebElement getRelatedProductsHeader() {
         return relatedProductsHeader;
+    }
+
+    public WebElement getMacButton() {
+        return macButton;
+    }
+
+    public WebElement getAddToWishListButton() {
+        return addToWishListButton;
+    }
+
+    public WebElement getWishListSuccessMessage() {
+        return wishListSuccessMessage;
+    }
+
+    public WebElement getWishListLink() {
+        return wishListLink;
     }
 }
