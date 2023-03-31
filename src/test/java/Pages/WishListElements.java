@@ -16,6 +16,9 @@ public class WishListElements extends MyMethods {
     @FindBy(css = "ul.breadcrumb>li:nth-child(3)>a")
     private WebElement wishListTextFromBreadCrumb;
 
+    @FindBy(xpath = "(//a[text()='iMac'])[2]")
+    private WebElement productIMac;
+
     public WebElement getWishListButtonFromRightColumn() {
         return wishListButtonFromRightColumn;
     }
@@ -24,4 +27,7 @@ public class WishListElements extends MyMethods {
         return wishListTextFromBreadCrumb;
     }
 
+    public WebElement getProductIMac() {
+        return productIMac;
+    }
 }
