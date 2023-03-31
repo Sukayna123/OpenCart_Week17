@@ -9,12 +9,24 @@ Feature: mix
     Then click on product comparison link from the displayed success message
 
 
- Scenario Outline: TC_PDP_002 Validate that Product Name, Brand and Product Code are displayed in the Product Display Page
+  Scenario Outline: TC_PDP_002 Validate that Product Name, Brand and Product Code are displayed in the Product Display Page
     Given Navigate to web site
     When Enter any existing "<Product>" into the Search box
     And  Click on the button having search icon
     And  Click on the Product displayed in the Search results
     Then Check the Product Name, Brand and Product Code in the displayed Product Display Page
     Examples:
-     | Product|
-      |iMac|
+      | Product |
+      | iMac    |
+
+  Scenario Outline:TC_PDP_030 Validate navigating to the Product Display page by using the Product Name link in the Cart button toggle box
+    Given Navigate to web site
+    When Enter any existing "<Product>" into the Search box
+    And Click on the button having search icon
+    And Click on Add to Cart option on the product that is displayed in the Search Results
+    And Click on Cart button which is in black color beside the search icon button on the top of the page
+    And Click on the Product Name link in the displayed toggle box
+    Examples:
+      | Product |
+      | iMac    |
+
