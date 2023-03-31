@@ -34,19 +34,6 @@ public class ProductCompareElements extends MyMethods {
     @FindBy(linkText = "Desktops")
     private WebElement desktopsButton;
 
-//    @FindBy(linkText = "http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=20")
-//    public WebElement desktopButtonHomePAge;
-//
-//    @FindBy(linkText = "http://opencart.abstracta.us:80/index.php?route=product/category&amp;path=20")
-//    public WebElement showAllDesktop;
-
-    @FindBy(id = "list-view")
-    public WebElement ListViewButton;
-
-    @FindBy(xpath = "(//div[@class='button-group']/button)[3]")
-    public WebElement compareThisProductButton;
-
-
     public WebElement getCompareProductButtonSingleProduct() {
         return compareProductButtonSingleProduct;
     }
@@ -78,21 +65,4 @@ public class ProductCompareElements extends MyMethods {
     public WebElement getDesktopsButton() {
         return desktopsButton;
     }
-
-//    public WebElement getDesktopButtonHomePAge() {
-//        return desktopButtonHomePAge;
-//    }
-//
-//    public WebElement getShowAllDesktop() {
-//        return showAllDesktop;
-//    }
-
-    public WebElement getListViewButton() {
-        return ListViewButton;
-    }
-
-    public WebElement getCompareThisProductButton() {
-        return compareThisProductButton;
-    }
-
 }

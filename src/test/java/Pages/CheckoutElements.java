@@ -99,6 +99,27 @@ public class CheckoutElements extends MyMethods {
     @FindBy(css = "input[id='button-payment-address']")
     private WebElement continueButtonBillingDetailsLogin;
 
+    @FindBy(xpath = "(//input[@value='new'])[2]")
+    private WebElement iWantToUseNewAddressCheckBox;
+
+    @FindBy(xpath = "//div[text()='First Name must be between 1 and 32 characters!']")
+    private WebElement firstNameWarningMessage;
+
+    @FindBy(xpath = "//div[text()='Last Name must be between 1 and 32 characters!']")
+    private WebElement lastNameWarningMessage;
+
+    @FindBy(xpath = "//div[text()='Address 1 must be between 3 and 128 characters!']")
+    private WebElement addressWarningMessage;
+
+    @FindBy(xpath = "//div[text()='City must be between 2 and 128 characters!']")
+    private WebElement cityWarningMessage;
+
+    @FindBy(id = "button-payment-address")
+    private WebElement continueBillingDetails;
+
+    @FindBy(css = "div#content>p")
+    private WebElement shoppingCartEmptyMessage;
+
     public WebElement getContinueButtonBillingDetailsLogin() {
         return continueButtonBillingDetailsLogin;
     }
@@ -213,5 +234,33 @@ public class CheckoutElements extends MyMethods {
 
     public WebElement getSuccessMessageForCase17() {
         return successMessageForCase17;
+    }
+
+    public WebElement getiWantToUseNewAddressCheckBox() {
+        return iWantToUseNewAddressCheckBox;
+    }
+
+    public WebElement getFirstNameWarningMessage() {
+        return firstNameWarningMessage;
+    }
+
+    public WebElement getLastNameWarningMessage() {
+        return lastNameWarningMessage;
+    }
+
+    public WebElement getAddressWarningMessage() {
+        return addressWarningMessage;
+    }
+
+    public WebElement getCityWarningMessage() {
+        return cityWarningMessage;
+    }
+
+    public WebElement getContinueBillingDetails() {
+        return continueBillingDetails;
+    }
+
+    public WebElement getShoppingCartEmptyMessage() {
+        return shoppingCartEmptyMessage;
     }
 }
