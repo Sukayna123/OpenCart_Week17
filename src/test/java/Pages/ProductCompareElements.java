@@ -38,6 +38,9 @@ public class ProductCompareElements extends MyMethods {
     @FindBy(id = "list-view")
     public WebElement ListViewButton;
 
+    @FindBy(xpath = "//a[text()='Product Compare (0)']")
+    private WebElement productCompareLink;
+
     public WebElement getCompareProductButtonSingleProduct() {
         return compareProductButtonSingleProduct;
     }
@@ -72,5 +75,9 @@ public class ProductCompareElements extends MyMethods {
 
     public WebElement getListViewButton() {
         return ListViewButton;
+    }
+
+    public WebElement getProductCompareLink() {
+        return productCompareLink;
     }
 }
